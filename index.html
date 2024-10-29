@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    />
+    <title>Ejercicios</title>
+  </head>
+  <body>
+    <div class="container fixed-grid has-4-cols mt-6">
+      <div class="grid">
+        <article>
+          <button id="canDrive" class="button is-info cell">
+            ¿Puedes manejar?
+          </button>
+        </article>
+        <article>
+          <button id="note" class="button is-success cell">Calificación</button>
+        </article>
+        <article>
+          <button id="stringS" class="button is-danger cell">
+            Cadena de texto
+          </button>
+        </article>
+        <article>
+          <button id="numberS" class="button is-link cell">
+            Cadena de numeros
+          </button>
+        </article>
+      </div>
+    </div>
+    <div class="modal" id="modalDrive">
+      <div class="modal-background">
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">¿Tienes edad para manejar?</p>
+            <button class="delete closes" aria-label="close"></button>
+          </header>
+          <section class="modal-card-body">
+            <!-- Content ... -->
+            <form id="driveForm">
+              <div class="notification" id="notification">
+                <button class="delete" id="closeNotification"></button>
+                <span></span>
+              </div>
+              <!-- Campo Edad -->
+              <div class="field">
+                <label class="label">Edad</label>
+                <div class="control">
+                  <input class="input" type="number" name="yearsO" required />
+                </div>
+              </div>
+              <!-- Botón Enviar -->
+              <div class="field">
+                <div class="control">
+                  <button class="save button is-primary" type="submit">
+                    Comprobar
+                  </button>
+                </div>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modalNote">
+      <div class="modal-background">
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">Calificaciones</p>
+            <button class="delete closes" aria-label="close"></button>
+          </header>
+          <section class="modal-card-body">
+            <!-- Content ... -->
+            <form id="noteForm">
+              <div class="notification" id="noti">
+                <button class="delete" id="closeNoti"></button>
+                <span></span>
+              </div>
+              <!-- Campo Calificación -->
+              <div class="field">
+                <label class="label">Calificacion</label>
+                <div class="control">
+                  <input class="input" type="number" name="notes" required />
+                </div>
+              </div>
+              <!-- Botón Enviar -->
+              <div class="field">
+                <div class="control">
+                  <button class="save button is-primary" type="submit">
+                    Comprobar
+                  </button>
+                </div>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modalString">
+      <div class="modal-background">
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">Cadena de texto</p>
+            <button class="delete closes" aria-label="close"></button>
+          </header>
+          <section class="modal-card-body">
+            <!-- Content ... -->
+            <form id="stringForm">
+              <div class="notification" id="noti2">
+                <button class="delete" id="closeNoti2"></button>
+                <span></span>
+              </div>
+              <!-- Campo Texto -->
+              <div class="field">
+                <label class="label">Texto</label>
+                <div class="control">
+                  <input
+                    class="input"
+                    type="Text"
+                    name="str"
+                    placeholder="Ingresa algun texto"
+                  />
+                </div>
+              </div>
+              <!-- Botón Enviar -->
+              <div class="field">
+                <div class="control">
+                  <button class="save button is-primary" id="saveBtn">
+                    Enviar
+                  </button>
+                  <button class="save button is-danger" type="submit">
+                    cancelar
+                  </button>
+                </div>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modalNumber">
+      <div class="modal-background">
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">Cadena de numeros</p>
+            <button class="delete closes" aria-label="close"></button>
+          </header>
+          <section class="modal-card-body">
+            <!-- Content ... -->
+            <form id="numberForm">
+              <div class="notification" id="noti3">
+                <button class="delete" id="closeNoti3"></button>
+                <span></span>
+              </div>
+              <!-- Campo Texto -->
+              <div class="field">
+                <label class="label">Numero</label>
+                <div class="control">
+                  <input
+                    class="input"
+                    type="Text"
+                    name="nUmber"
+                    placeholder="Ingresa algun numero"
+                  />
+                </div>
+              </div>
+              <!-- Botón Enviar -->
+              <div class="field">
+                <div class="control">
+                  <button class="save button is-primary" id="saveBtn">
+                    Enviar
+                  </button>
+                  <button class="save button is-danger" type="submit">
+                    cancelar
+                  </button>
+                </div>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
